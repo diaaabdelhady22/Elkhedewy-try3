@@ -1,0 +1,247 @@
+<html>
+    <link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lateef:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="particles">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+</div>
+
+<div class="box">  
+    <img src="logow.png" width="300px" id="gg"><div class="box2">  
+   
+    أ/حمدي دراز 
+    <div class="box4">  
+
+        <button id="kk">
+            <img src="more.png" width="100px">
+        </button>
+
+        
+    </div> 
+</div>
+    </div>
+
+</div>
+         <br><br><be></be> <img src="logob.png" width="100%">
+         <div class="name">
+          <div id="nameDisplay">...</div>
+          </div>  <br><br><br><br><br><br>
+          <a href="course1.html"><button id="b1">الحــــــــصص</button></a><br><br><br>
+          <a href="course2.html"><button id="b1">الامتحــــــــانات</button></a><br><br><br>
+          <a href="course3.html"><button id="b1">الجــــــدول</button></a>
+     <script>
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get('code');
+/*======================================== codes ===============================================*/
+    const names = {
+      "nQgy169752": "اهلا بك ، آدم احمد",
+      "hMaz760813": "hey , mohamed abdelsalam",
+      "lCWR178645": "hey , ahmed hasan",
+      "TQYP389214": "اهلا بك ، ضياء عبدالهادي",
+      "MWTZ513047": "hey , amr sakr",
+      "OooW156738": "hey , omar metwaly",
+      "BRng412308": "hey , ahmed said",
+      "WeZd184390": "hey , adam yehia"
+    };
+/*==============================================================================================*/
+    const display = document.getElementById('nameDisplay');
+    if(names[code]) {
+      display.textContent = names[code];
+    } else {
+      window.location.href="index.html"
+      
+       alert("code is not right")
+    }
+
+  </script>
+  <script>
+let ss = document.querySelector(".ss");
+let openBtn = document.getElementById("kk");
+let closeBtn = document.getElementById("closeSS");
+
+openBtn.addEventListener("click", function () {
+    ss.style.opacity = "1";
+    ss.style.visibility = "visible";
+    ss.style.right="0";
+});
+
+closeBtn.addEventListener("click", function () {
+    ss.style.opacity = "0";
+    ss.style.visibility = "hidden";
+    ss.style.right="-1000";
+});
+</script>
+<script>
+
+/* فتح القائمة */
+
+let ss = document.querySelector(".ss");
+
+let openBtn = document.getElementById("kk");
+
+let closeBtn = document.getElementById("closeSS");
+
+openBtn.onclick = function () {
+
+    ss.style.opacity = "1";
+
+    ss.style.visibility = "visible";
+
+    ss.style.right = "0";
+
+};
+
+/* قفل القائمة */
+
+closeBtn.onclick = function () {
+
+    ss.style.opacity = "0";
+
+    ss.style.visibility = "hidden";
+
+    ss.style.right = "-1000px";
+
+};
+
+/* فتح الإعدادات */
+
+document.getElementById("openSettings").onclick = function(){
+
+    document.getElementById("mainPage").style.display = "none";
+
+    document.getElementById("settingsPage").style.display = "block";
+
+};
+
+/* رجوع */
+
+document.getElementById("backBtn").onclick = function(){
+
+    document.getElementById("settingsPage").style.display = "none";
+
+    document.getElementById("mainPage").style.display = "block";
+
+};
+
+/* الوضع الليلي */
+
+document.getElementById("darkMode").onchange = function(){
+
+    if(this.checked){
+
+        document.body.style.background = "white";
+
+        document.body.style.color = "black";
+
+    }else{
+
+        document.body.style.background = "#030303";
+
+        document.body.style.color = "white";
+
+    }
+
+};
+
+/* إيقاف الأنيميشن */
+
+document.getElementById("animationToggle").onchange = function(){
+
+    let all = document.querySelectorAll("*");
+
+    if(this.checked){
+
+        all.forEach(function(el){
+
+            el.style.animationPlayState = "running";
+
+        });
+
+    }else{
+
+        all.forEach(function(el){
+
+            el.style.animationPlayState = "paused";
+
+        });
+
+    }
+
+};
+
+/* particles */
+
+document.getElementById("particlesToggle").onchange = function(){
+
+    let particles = document.querySelector(".particles");
+
+    if(this.checked){
+
+        particles.style.display = "none";
+
+    }else{
+
+        particles.style.display = "block";
+
+    }
+
+};
+
+/* تكبير الخط */
+
+document.getElementById("fontToggle").onchange = function(){
+
+    if(this.checked){
+
+        document.body.style.zoom = "110%";
+
+    }else{
+
+        document.body.style.zoom = "100%";
+
+    }
+
+};
+
+/* الأصوات */
+
+document.getElementById("soundToggle").onchange = function(){
+
+    let media = document.querySelectorAll("audio,video");
+
+    media.forEach(function(item){
+
+        item.muted = !item.muted;
+
+    });
+
+};
+
+/* الإشعارات */
+
+document.getElementById("notificationToggle").onchange = function(){
+
+    if(this.checked){
+
+        alert("تم تشغيل الإشعارات");
+
+    }else{
+
+        alert("تم إيقاف الإشعارات");
+
+    }
+
+};
+
+</script>
+<br><br>
+  <center>ضياء عبدالهادي انشأ هذا الصفحة</center>
+</body>
+</html>
